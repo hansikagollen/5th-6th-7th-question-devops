@@ -1,0 +1,15 @@
+# Create deployment and service
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+# After pushing image to Docker Hub and updating image name
+kubectl rollout restart deployment node-web-deployment
+
+# Verify pods
+kubectl get pods
+
+# Verify services
+kubectl get svc
+
+# (If error) inspect pod
+kubectl describe pod <pod-name>
