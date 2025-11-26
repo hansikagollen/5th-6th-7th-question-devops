@@ -1,0 +1,47 @@
+📘 Docker Hub Integration – Commands (README Style)
+✅ 1. Tag the Local Image
+
+Tag your existing Docker image (alpine:latest) with your Docker Hub repository name:
+
+docker tag alpine:latest hansikagollen/alpine-demo:latest
+
+✅ 2. Login to Docker Hub
+
+Authenticate with your Docker Hub account:
+
+docker login
+
+
+You will enter:
+
+Username
+
+Password
+
+✅ 3. Push the Tagged Image to Docker Hub
+
+Upload your image to your Docker Hub repository:
+
+docker push hansikagollen/alpine-demo:latest
+
+✅ 4. Pull the Image on Another System
+
+On any machine (or after deleting the local copy):
+
+docker pull hansikagollen/alpine-demo:latest
+
+✅ 5. (Optional) Run the Pulled Image
+
+Start a container using the image from Docker Hub:
+
+docker run -it --name alpine-demo-container hansikagollen/alpine-demo:latest sh
+
+
+You will enter an interactive shell (/ #).
+
+✔ All Commands Summary
+docker tag alpine:latest hansikagollen/alpine-demo:latest
+docker login
+docker push hansikagollen/alpine-demo:latest
+docker pull hansikagollen/alpine-demo:latest
+docker run -it --name alpine-demo-container hansikagollen/alpine-demo:latest sh
